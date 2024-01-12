@@ -37,9 +37,22 @@ Racial Faces in-the-wild (RFW), was proposed by the same authors of BUPT-Balance
 
 ## Results
 
-<img src="table_1.png" width="1200" align="right"> 
 
-<img src="table_2.png" width="1200" align="right"> 
+A careful analysis of the performance of the different sized models at full precision **(Table 1)** shows that smaller models tend to have higher biases and lower performance in terms of average accuracy. ResNet-100 is an exception and this difference might be related to the fact that SER becomes highly sensitive when the errors are below 1\%.
+<p align="center">
+<img src="table_1.png" width="800" align="center"> 
+</p>
+The quantized version of these models seems to retain the performance and bias advantages when compared to simpler models. As theorised, the quantization has a negative impact on the bias, and in most cases on the performance too. The lower the number of bit, the higher the bias. However, the usage of synthetic data has shown, for all the different precisions, a capability to reduce the bias while retaining the performance. From this data, it is not clear if the improvement is due to a specific characteristic of the synthetic data. 
+
+We have used the ethnicity classifier to get an estimation of the racial balance of the synthetic data. We obtained 365889 Caucasians, 81568 Asians, 81568 Indians and 61966 Africans. Since the data is not balanced, it is not possible to associate the effects of this data to its balance. 
+
+<p align="center">
+<img src="table_2.png" width="800" align="center"> 
+</p>
+
+Further training two ResNet-34 on BUPT-Balancedface and BUPT-Globalface shows, at full precision, that despite a higher performance of the latter, the balance of the former is essential to ensure better bias metrics. On the model trained with the BUPT-Balancedface the versions quantized with synthetic data has not only kept the same tendency of the previous table, but it has also surpassed by a large margin the version of the method quantized with the balanced data. This might be caused by the lower variability of the BUPT-Balancedface data with respect to the number of identities. 
+
+The ResNet-34 trained on the BUPT-Globalface performs better if quantized with the data from the BUPT-Balancedface instead of using the data from training. Once again, it might be possible that introducing variability and unseen data for the quantization increases the capability of the model to be robust for all ethnicities. This is further validated by the version quantized with the synthetic data, which leads to a performance similar to the full precision model. 
 
 ## Citation 
 
