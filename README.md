@@ -43,6 +43,7 @@ Racial Faces in-the-wild (RFW), was proposed by the same authors of BUPT-Balance
 
 ## Citation 
 
+```bibtex
 @inproceedings{neto2023compressed,
   title={Compressed models decompress race biases: What quantized models forget for fair face recognition},
   author={Neto, Pedro C and Caldeira, Eduarda and Cardoso, Jaime S and Sequeira, Ana F},
@@ -51,4 +52,5 @@ Racial Faces in-the-wild (RFW), was proposed by the same authors of BUPT-Balance
   year={2023},
   organization={IEEE}
 }
+```
 
