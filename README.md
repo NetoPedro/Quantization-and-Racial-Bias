@@ -1,7 +1,7 @@
 # Quantization and Racial Biases
 
 
-Official repository for the "Compressed Models Decompress Race Biases: What Quantized Models Forget for Fair Face Recognition" paper at [BIOSIG 2023]([http://eusipco2023.org/](https://biosig.de)).
+Official repository for the "Compressed Models Decompress Race Biases: What Quantized Models Forget for Fair Face Recognition" paper  and winner of the best paper award at [BIOSIG 2023](https://biosig.de). 
 
 The paper can be viewed at: [Arxiv](https://arxiv.org/abs/2308.11840) and [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/10346003)
 
